@@ -19,9 +19,14 @@ module.exports = {
     output: {
       path: __dirname + '/dist',
       publicPath: '/',
-      filename: 'bundle.js'
+      filename: 'bundle.js',
+      library: 'klijentlib',
+      libraryTarget: 'umd'
     },
     devServer: {
       contentBase: './dist'
-    }
+    },
+    externals : [
+      'react', 'react-dom'
+    ]
   };

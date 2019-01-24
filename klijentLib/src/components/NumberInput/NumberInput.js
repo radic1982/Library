@@ -8,7 +8,7 @@ class NumberInput extends Component {
       super();
   
       this.state = {
-        numValue: ""
+        numValue: 0
       };
   
       this.handleChange = this.handleChange.bind(this);
@@ -24,7 +24,7 @@ class NumberInput extends Component {
           <form action="">
             <div className="input-field">
               <input type="number" id="name" min="0" max="99" value={this.state.numValue} onChange={this.handleChange} required />
-              <label htmlFor="name">Izvolite uneti broj:</label>
+              <label htmlFor="name">{this.props.label}</label>
               
             </div>
           </form>
@@ -38,10 +38,12 @@ class NumberInput extends Component {
 
     NumberInput.propTypes = {
       id: PropTypes.string,
-      label: PropTypes.string,
+      label: PropTypes.string.isRequired,
       text: PropTypes.string,
       type: PropTypes.string,
       value: PropTypes.number,
+      min: PropTypes.string,
+      max: PropTypes.string,
       numValue: PropTypes.number,
       handleChange: PropTypes.func
     };

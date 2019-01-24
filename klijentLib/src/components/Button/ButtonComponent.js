@@ -6,23 +6,21 @@ import './_buttonStyle.scss';
 class ButtonComponent extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        
-      }
       this.handleClick = this.handleClick.bind(this);
       
     }
 
     handleClick() {
-        
+       this.props.handleClick(e); 
     }
   
     render() {
         //className={`btn ${this.props.customStyle}`}
+        // package.json ide u scripts "prepare": "npm run build", "build": "webpack src/index.js dist/index.js",
         this.props.size;
         return ( 
             <div>
-                <button className='btn hvr-grow' onClick={this.handleClick}>Click Me!</button>
+                <button className='btn hvr-grow' onClick={this.handleClick}>{this.props.label}</button>
             </div>
         )
     } 
@@ -30,7 +28,8 @@ class ButtonComponent extends React.Component {
 
   ButtonComponent.PropTypes = {
       customStyle: PropTypes.string,
-      handleClick: PropTypes.func
+      handleClick: PropTypes.func,
+      label: PropTypes.string.isRequired
   }
 
   export default ButtonComponent;

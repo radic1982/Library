@@ -24,14 +24,14 @@ class TextInput extends Component {
           <form action="">
             <div className="input-field">
               <input type="text" id="name" value={this.state.textValue} onChange={this.handleChange} required />
-              <label for="name">Izvolite kucajte:</label>
+              <label for="name">{this.props.label}</label>
             </div>
           </form>
         );
       }
     }
     TextInput.propTypes = {
-      label: PropTypes.string,
+      label: PropTypes.string.isRequired,
       text: PropTypes.string,
       type: PropTypes.string,
       value: PropTypes.string,

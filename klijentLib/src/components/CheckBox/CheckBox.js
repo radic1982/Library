@@ -22,7 +22,7 @@ class CheckBox extends React.Component {
     render() {
       return (
           <form>
-            <label className="checkBox"> I'am already checked!
+            <label className="checkBox">{this.props.label}
             <input type="checkbox"
                 checked={this.state.isChecked}
                 onChange={this.handleChange}
@@ -41,7 +41,7 @@ class CheckBox extends React.Component {
   CheckBox.propTypes = {
     checked: PropTypes.bool,
     handleChange: PropTypes.func,
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     type: PropTypes.string
   };
 
