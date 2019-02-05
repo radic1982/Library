@@ -23,6 +23,7 @@ module.exports = {
       library: 'klijentlib',
       libraryTarget: 'umd'
     },
+    devtool: "source-map",
     devServer: {
       contentBase: './dist'
     },
