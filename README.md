@@ -8,7 +8,7 @@ Izrađena je koristeći Webpack
 
   
   
-U drugim projektima se može koristiti tako što se package.json u dependecies navodi sledeće:  
+U drugim projektima se može koristiti tako što se u package.json u dependecies navodi sledeće:  
 ```
 
 "dependencies": {  
